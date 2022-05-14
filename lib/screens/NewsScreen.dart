@@ -18,7 +18,7 @@ class NewsScreen extends StatelessWidget {
         child: SizedBox(
             width: WidgetsBinding.instance?.window.physicalSize.width,
             height: WidgetsBinding.instance?.window.physicalSize.height,
-            child: const NewsList()
+            child: NewsList()
         ),
       ),
     );

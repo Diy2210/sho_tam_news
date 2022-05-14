@@ -1,14 +1,14 @@
 class NewsModel {
   String title;
-  // String description;
-  // String image;
+  String description;
+  String image;
   String url;
   String publishedAt;
 
   NewsModel({
     this.title = '',
-    // this.description = '',
-    // this.image = '',
+    this.description = '',
+    this.image = '',
     this.url = '',
     this.publishedAt = ''
   });
@@ -17,6 +17,8 @@ class NewsModel {
       : title = json['title'],
         // description = json['description'] == '' ? '' : json['description'],
         // image = json['urlToImage'] == '' ? '' : json['urlToImage'],
+        description = json['description'] ?? '',
+        image = json['urlToImage'] ?? '',
         url = json['url'],
         publishedAt = json['publishedAt'];
 }
