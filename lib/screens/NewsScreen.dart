@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:sho_tam/NewsList.dart';
-import 'ShoTamAPI.dart';
+import 'package:sho_tam/widgets/NewsList.dart';
+import '../ShoTamAPI.dart';
 
 class NewsScreen extends StatelessWidget {
   static const routeName = '/news_screen';
 
-  // const NewsScreen({Key? key}) : super(key: key);
+  const NewsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class NewsScreen extends StatelessWidget {
         child: SizedBox(
             width: WidgetsBinding.instance?.window.physicalSize.width,
             height: WidgetsBinding.instance?.window.physicalSize.height,
-            child: NewsList()
+            child: const NewsList()
         ),
       ),
     );

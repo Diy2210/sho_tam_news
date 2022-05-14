@@ -1,4 +1,4 @@
-import 'package:sho_tam/NewsModel.dart';
+import 'package:sho_tam/models/NewsModel.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 

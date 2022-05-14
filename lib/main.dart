@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sho_tam/NewsScreen.dart';
+import 'package:sho_tam/screens/NewsScreen.dart';
 
 void main() {
   runApp(const MyApp());
