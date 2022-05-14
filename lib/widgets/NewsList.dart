@@ -27,7 +27,31 @@ class NewsList extends StatelessWidget {
           return ListView.builder(
             itemCount: snapshot.data?.length,
             itemBuilder: (ctx, index) {
-              return Card(
+              return GestureDetector(
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext bc) {
+                          return AlertDialog(
+                            insetPadding: const EdgeInsets.fromLTRB(10, 80, 10, 80),
+                            content: snapshot.data![index].description.isNotEmpty
+                              ? Text(snapshot.data![index].description, style: const TextStyle(fontSize: 20))
+                              : const Text('Подробностей, как и потерь нет!', style: TextStyle(fontSize: 20)),
+                            actions: <Widget>[
+                              Container(
+                                alignment: Alignment.bottomCenter,
+                                child: TextButton(
+                                  child: const Text('Ясно, понятно', style: TextStyle(fontSize: 18)),
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                              ),
+                            ],
+                          );
+                        });
+              },
+              child: Card(
                 elevation: Platform.isIOS ? 0 : 2,
                 child: Row(children: [
                   ///Image
@@ -84,6 +108,7 @@ class NewsList extends StatelessWidget {
                         ]),
                   ),
                 ]),
+              ),
               );
             },
           );

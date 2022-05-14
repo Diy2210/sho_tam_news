@@ -15,8 +15,6 @@ class NewsModel {
 
   NewsModel.fromJson(Map<dynamic, dynamic> json)
       : title = json['title'],
-        // description = json['description'] == '' ? '' : json['description'],
-        // image = json['urlToImage'] == '' ? '' : json['urlToImage'],
         description = json['description'] ?? '',
         image = json['urlToImage'] ?? '',
         url = json['url'],
