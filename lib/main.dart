@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: NewsScreen(),
+      home: const NewsScreen(),
       routes: {
-        NewsScreen.routeName: (ctx) => NewsScreen(),
+        NewsScreen.routeName: (ctx) => const NewsScreen(),
       }
     );
   }
