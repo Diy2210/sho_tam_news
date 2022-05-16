@@ -58,20 +58,16 @@ class NewsList extends StatelessWidget {
                     Expanded(
                       flex: 3,
                       child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
+
                             ///Published at
                             SizedBox(
                               height: 20,
                               width: double.infinity,
                               child: Text(
-                                // DateTime.parse(snapshot.data![index].publishedAt).day.toString()+"."+
-                                // DateTime.parse(snapshot.data![index].publishedAt).month.toString()+"."+
-                                // DateTime.parse(snapshot.data![index].publishedAt).year.toString(),
                                 DateTime.parse(
-                                        snapshot.data![index].publishedAt)
+                                    snapshot.data![index].publishedAt)
                                     .toString(),
                                 style: const TextStyle(
                                     fontSize: 12,
@@ -79,12 +75,16 @@ class NewsList extends StatelessWidget {
                                     fontWeight: FontWeight.bold),
                               ),
                             ),
+
+                            ///Title
                             SizedBox(
                               width: double.infinity,
                               child: Text(
                                 snapshot.data![index].title,
                                 style: const TextStyle(
-                                    fontSize: 15, fontWeight: FontWeight.bold),
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold
+                                ),
                               ),
                             ),
                           ]),

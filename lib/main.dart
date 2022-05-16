@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sho_tam/screens/AppSplashScreen.dart';
 import 'package:sho_tam/screens/NewsScreen.dart';
 
 void main() {
@@ -16,8 +17,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: const NewsScreen(),
+      home: const AppSplashScreen(),
       routes: {
+        AppSplashScreen.routeName: (ctx) => const AppSplashScreen(),
         NewsScreen.routeName: (ctx) => const NewsScreen(),
       }
     );

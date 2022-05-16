@@ -16,8 +16,8 @@ class NewsScreen extends StatelessWidget {
       body: RefreshIndicator(
         onRefresh: () => getNews(context),
         child: SizedBox(
-            width: WidgetsBinding.instance?.window.physicalSize.width,
-            height: WidgetsBinding.instance?.window.physicalSize.height,
+            width: WidgetsBinding.instance.window.physicalSize.width,
+            height: WidgetsBinding.instance.window.physicalSize.height,
             child: NewsList()
         ),
       ),
