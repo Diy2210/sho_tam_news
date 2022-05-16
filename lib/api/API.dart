@@ -1,6 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
-import 'package:sho_tam/models/NewsModel.dart';
+import 'package:sho_tam/models/News.dart';
 
 class API {
   Future<List<NewsModel>?> getNews() async {
