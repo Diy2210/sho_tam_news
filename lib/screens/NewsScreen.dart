@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sho_tam/widgets/NewsList.dart';
-import '../ShoTamAPI.dart';
+import '../api/ShoTamAPI.dart';
 
 class NewsScreen extends StatelessWidget {
   static const routeName = '/news_screen';
