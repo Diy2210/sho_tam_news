@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sho_tam/widgets/NewsList.dart';
-import '../api/ShoTamAPI.dart';
+import '../api/API.dart';
 
 class NewsScreen extends StatelessWidget {
   static const routeName = '/news_screen';
@@ -27,7 +27,7 @@ class NewsScreen extends StatelessWidget {
   ///Pull to refresh news
   getNews(BuildContext context) async {
     try {
-      await ShoTamAPI().getNews();
+      await API().getNews();
     } catch (error) {
       print('Error');
     }

@@ -2,13 +2,13 @@ import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../models/NewsModel.dart';
-import '../api/ShoTamAPI.dart';
+import '../api/API.dart';
 
 class NewsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<NewsModel>?>(
-        future: ShoTamAPI().getNews(),
+        future: API().getNews(),
         builder: (ctx, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(

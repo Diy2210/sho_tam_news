@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 import 'package:sho_tam/models/NewsModel.dart';
 
-class ShoTamAPI {
+class API {
   Future<List<NewsModel>?> getNews() async {
     final List<NewsModel> newsModel = [];
     try {
