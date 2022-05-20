@@ -1,6 +1,4 @@
-# sho_tam
-
-Шо там у нас?
+Шо там, новости сейчас.
 
 Screenshots:
 ![Screenshots 1](scr_1.png)
